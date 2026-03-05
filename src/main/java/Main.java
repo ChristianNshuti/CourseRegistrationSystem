@@ -10,4 +10,9 @@ import java.util.Scanner;
 
 public class Main {
 
+    Scanner scanner = new Scanner(System.in);
+
+    StudentService studentService = new StudentService();
+    CourseService courseService = new CourseService();
+    RegistrationService registrationService = new RegistrationService();
 }
