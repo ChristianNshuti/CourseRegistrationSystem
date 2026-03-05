@@ -15,4 +15,8 @@ public class Main {
     StudentService studentService = new StudentService();
     CourseService courseService = new CourseService();
     RegistrationService registrationService = new RegistrationService();
+
+    while (true) {
+
+    }
 }
