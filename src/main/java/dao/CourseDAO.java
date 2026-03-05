@@ -19,4 +19,22 @@ public class CourseDAO {
         tx.commit();
         session.close();
     }
+
+    public List<Course> getAllCourses() {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        List<Course> courses = session.get("from courses",Course.class).list();
+        session.close();
+        return courses;
+    }
+
+    public Course getCourseById(Long courseId) {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        Course course = session.get(Course.class,courseId);
+        session.close();
+        return course;
+    }
 }
