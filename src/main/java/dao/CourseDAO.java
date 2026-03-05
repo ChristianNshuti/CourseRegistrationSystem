@@ -24,7 +24,7 @@ public class CourseDAO {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
 
-        List<Course> courses = session.get("from courses",Course.class).list();
+        List<Course> courses = session.createQuery("from Course",Course.class).list();
         session.close();
         return courses;
     }
