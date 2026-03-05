@@ -2,8 +2,7 @@ package service;
 
 import dao.RegistrationDAO;
 import entity.Registration;
-import entity.Course;
-import entity.Student;
+
 
 import java.util.*;
 
@@ -19,11 +18,11 @@ public class RegistrationService {
         return registrationDAO.getAllRegistrations();
     }
 
-    public List<Course> getCoursesByStudent(Long studentId) {
+    public List<Registration> getCoursesByStudent(Long studentId) {
         return registrationDAO.getCoursesByStudent(studentId);
     }
 
-    public List<Student> getStudentsByCourse(Long courseId) {
+    public List<Registration> getStudentsByCourse(Long courseId) {
         return registrationDAO.getStudentsByCourse(courseId);
     }
 }
