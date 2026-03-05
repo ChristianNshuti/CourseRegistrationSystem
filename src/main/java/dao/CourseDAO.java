@@ -52,7 +52,7 @@ public class CourseDAO {
         session.close();
     }
 
-    public void deleteCourse(courseId) {
+    public void deleteCourse(Long courseId) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         Course course = session.get(Course.class,courseId);
