@@ -37,4 +37,18 @@ public class CourseDAO {
         session.close();
         return course;
     }
+
+    public void updateCourse(Long courseId,String title,String instructor) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = session.beginTransaction();
+
+        Course course = session.get(Course.class,courseId);
+
+        if(course != null) {
+            course.setTitle(title);
+            course.setInstructor(instructor);
+        }
+        tx.commit();
+        session.close();
+    }
 }
