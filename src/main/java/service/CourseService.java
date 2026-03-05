@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CourseService {
 
-    private CourseDAO courseDAO = new CourseDAO();
+    private final CourseDAO courseDAO = new CourseDAO();
 
     public void addCourse(String title, String instructor) {
         courseDAO.saveCourse(title, instructor);
