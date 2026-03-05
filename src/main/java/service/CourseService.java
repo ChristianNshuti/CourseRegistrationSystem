@@ -13,7 +13,7 @@ public class CourseService {
         courseDAO.saveCourse(title, instructor);
     }
 
-    public Course getAllCourses() {
+    public List<Course> getAllCourses() {
         return courseDAO.getAllCourses();
     }
 
