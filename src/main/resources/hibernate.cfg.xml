@@ -10,7 +10,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:postgresql://localhost:5432/studentmanagement
+            jdbc:postgresql://localhost:5432/student_course_registration
         </property>
 
         <property name="hibernate.connection.username">
@@ -39,7 +39,9 @@
             true
         </property>
 
-        <mapping class="student.entity.Student"/>
+        <mapping class="entity.Student"/>
+        <mapping class="entity.Course"/>
+        <mapping class="entity.Registration"/>
 
     </session-factory>
 </hibernate-configuration>
